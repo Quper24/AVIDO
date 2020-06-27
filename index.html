@@ -37,8 +37,8 @@
 						<img src="img/logo.svg" alt="">
 					</a>
 				</div>
-				<nav>
-					<ul class="menu">
+				<nav class="menu">
+					<ul class="menu__container">
 						<li class="menu__link"><a href="#">Одежда</a></li>
 						<li class="menu__link"><a href="#">Обувь</a></li>
 						<li class="menu__link"><a href="#">Игрушки</a></li>
@@ -46,6 +46,9 @@
 						<li class="menu__link"><a href="#">Техника</a></li>
 					</ul>
 				</nav>
+				<button class="add">
+					Подать объявление
+				</button>
 			</div>
 			<div class="search">
 				<form class="search__form">
@@ -55,6 +58,7 @@
 					<button class="search__btn" type="submit">Найти</button>
 				</form>
 			</div>
+
 		</div>
 	</header>
 
@@ -110,6 +114,61 @@
 
 
 	</main>
+
+	<div class="modal modal__add" style="display: none">
+		<div class="modal__block">
+			<h2>Подать Объявление</h2>
+			<form class="modal__submit">
+				<label for="nameItem">
+					<span>Название:</span>
+					<input id="nameItem" name="nameItem" type="text">
+				</label>
+
+				<label for="yearItem">
+					<span>Год:</span>
+					<input id="yearItem" name="yearItem" type="text">
+				</label>
+
+				<label for="conditionItem">
+					<span>Состояние:</span>
+					<input id="conditionItem" name="conditionItem" type="text">
+				</label>
+
+				<label for="descriptionItem">
+					<span>Описание:</span>
+					<input id="descriptionItem" name="descriptionItem" type="text">
+				</label>
+
+				<label for="costItem">
+					<span>Цена:</span>
+					<input id="costItem" name="costItem" type="text">
+				</label>
+
+				<button class="modal__btn-submit">Отправить</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal modal__item" >
+		<div class="modal__block">
+			<h2 class="modal__header">Купить</h2>
+			<div class="modal__description">
+				<div><img class="modal__image" src="img/temp.jpg" alt="test"></div>
+				<div>
+					<h3>Тестовый Телефон</h3>
+					<p>Год: <span>2005</span></p>
+					<p>Состояние: <span>отличное</span></p>
+					<p>Описание:
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aut deleniti dolores ex explicabo fugit hic?</span>
+					</p>
+					<p>Цена: <span>4000 ₽</span></p>
+					<button>Купить</button>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
 
 
 </body>
