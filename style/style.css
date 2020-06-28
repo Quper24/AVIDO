@@ -66,6 +66,23 @@ button {
   padding: 0 30px;
 }
 
+.btn {
+  background-color: #0af;
+  border-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: 15px;
+  display: block;
+}
+.btn:hover {
+  background-color: #009cf0;
+}
+
 .header {
   margin-top: 15px;
   display: flex;
@@ -112,22 +129,6 @@ button {
   border: 2px solid #ccc;
   border-left-width: 1px;
   background-color: transparent;
-}
-
-.add {
-  background-color: #0af;
-  border-color: transparent;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  min-height: 30px;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-left: auto;
-  margin-bottom: 15px;
-}
-.add:hover {
-  background-color: #009cf0;
 }
 
 .catalog {
@@ -191,10 +192,34 @@ button {
   margin-top: 10px;
   margin-left: auto;
 }
-.modal__description {
+.modal__content {
   display: flex;
 }
-
+.modal__description p {
+  margin-top: 10px;
+}
+.modal__file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.modal__file-btn {
+  line-height: 2;
+  padding: 0 10px;
+  text-align: center;
+}
+.modal__file-label {
+  display: block !important;
+}
+.modal__file-label:hover {
+  cursor: pointer;
+}
+.modal__file-label:hover span {
+  background-color: #BF3F4A;
+}
 @media (max-width: 515px) {
   .catalog {
     justify-content: center;
