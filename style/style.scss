@@ -154,8 +154,14 @@ button {
 }
 
 .card {
+  cursor: pointer;
+  box-shadow: 1px 2px 5px 0 rgba(174, 174, 174, 0.75);
   &__image {
     border: 1px solid #ccc;
+  }
+
+  &__description {
+    padding: 15px;
   }
 
   &__header {
@@ -169,6 +175,7 @@ button {
     font-weight: bold;
   }
 }
+
 
 .modal {
   position: fixed;
@@ -185,6 +192,7 @@ button {
     padding: 30px;
     max-width: 600px;
     margin: 30px;
+    position: relative;
   }
   &__image {
     max-width: 200px;
@@ -248,8 +256,24 @@ button {
 
     }
   }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 24px;
+    line-height: 24px;
+    &:hover {
+      color: #009cf0;
+    }
+  }
 }
 
+.hide {
+  display: none;
+}
 
 
 

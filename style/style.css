@@ -141,8 +141,15 @@ button {
   justify-content: space-between;
 }
 
+.card {
+  cursor: pointer;
+  box-shadow: 1px 2px 5px 0 rgba(174, 174, 174, 0.75);
+}
 .card__image {
   border: 1px solid #ccc;
+}
+.card__description {
+  padding: 15px;
 }
 .card__header {
   margin-top: 15px;
@@ -170,6 +177,7 @@ button {
   padding: 30px;
   max-width: 600px;
   margin: 30px;
+  position: relative;
 }
 .modal__image {
   max-width: 200px;
@@ -220,6 +228,23 @@ button {
 .modal__file-label:hover span {
   background-color: #BF3F4A;
 }
+.modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 24px;
+  line-height: 24px;
+}
+.modal__close:hover {
+  color: #009cf0;
+}
+
+.hide {
+  display: none;
+}
+
 @media (max-width: 515px) {
   .catalog {
     justify-content: center;

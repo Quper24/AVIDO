@@ -1,28 +1,39 @@
-const modalFileInput = document.querySelector('.modal__file-input'),
-	modalFileBtn = document.querySelector('.modal__file-btn'),
-	modalImageAdd = document.querySelector('.modal__image-add');
 
-modalFileInput.addEventListener('change', event => {
-	const target = event.target;
+// 1 день
 
-	const infoFile = {};
+{
+	//модальное окно для подачи объявления
 
-	const reader = new FileReader();
-	reader.addEventListener('load', (event) => {
-		if (infoFile.size < 200000) {
-			modalFileBtn.textContent = infoFile.filename;
-			infoFile.base64 = btoa(event.target.result);
-			modalImageAdd.src = 'data:image/jpeg;base64,' + infoFile.base64;
-		} else {
-			modalFileBtn.textContent = 'файл должен быть меньше 200 кб'
+	const addAd = document.querySelector('.add__ad');
+	const modalAdd = document.querySelector('.modal__add');
+
+	addAd.addEventListener('click', () => {
+		modalAdd.classList.remove('hide');
+	});
+
+	modalAdd.addEventListener('click', event => {
+		if (event.target === modalAdd || event.target.classList.contains('modal__close')) {
+			modalAdd.classList.add('hide');
 		}
 	});
 
-	const file = target.files[0];
-	infoFile.size = file.size;
-	infoFile.filename = file.name;
-	reader.readAsBinaryString(file);
-});
+}
 
+{
+	//модальное окно объявления
+	const catalog = document.querySelector('.catalog');
+	const modalItem = document.querySelector('.modal__item');
+	catalog.addEventListener('click', event => {
+		if (event.target.closest('.card')) {
+			modalItem.classList.remove('hide');
+		}
+	});
 
+	modalItem.addEventListener('click', event => {
+		if (event.target === modalItem || event.target.classList.contains('modal__close')) {
+			modalItem.classList.add('hide');
+		}
+	});
+
+}
 
