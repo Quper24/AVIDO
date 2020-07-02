@@ -165,13 +165,6 @@
 					</label>
 
 					<label>
-						<span>Год:</span>
-						<input name="yearItem" type="number" min="1600" max="2020" step="1" value="2020" required>
-					</label>
-
-
-
-					<label>
 						<span>Состояние:</span>
 						<select name="status">
 							<option value="old">Б/у</option>
@@ -205,13 +198,12 @@
 			<div class="modal__content">
 				<div><img class="modal__image modal__image-item" src="img/temp.jpg" alt="test"></div>
 				<div class="modal__description">
-					<h3>Тестовый Телефон</h3>
-					<p>Год: <span>2005</span></p>
-					<p>Состояние: <span>отличное</span></p>
+					<h3 class="modal__header-item">Тестовый Телефон</h3>
+					<p>Состояние: <span class="modal__status-item">отличное</span></p>
 					<p>Описание:
-						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aut deleniti dolores ex explicabo fugit hic?</span>
+						<span class="modal__description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aut deleniti dolores ex explicabo fugit hic?</span>
 					</p>
-					<p>Цена: <span>4000 ₽</span></p>
+					<p>Цена: <span class="modal__cost-item">4000 ₽</span></p>
 					<button class="btn">Купить</button>
 				</div>
 			</div>
