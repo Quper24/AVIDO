@@ -75,8 +75,6 @@ modalSubmit.addEventListener('submit', event => {
 
 
 
-
-
 // 	//Работа с фото
 //
 // 	const modalFileInput = document.querySelector('.modal__file-input'),
