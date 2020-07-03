@@ -31,9 +31,9 @@ const saveBD = () => {
 	localStorage.setItem('awito', JSON.stringify(dataBase));
 };
 
-const renderCard = () => {
+const renderCard = (DB = dataBase) => {
 	catalog.textContent = '';
-	dataBase.forEach((item, i) => {
+	DB.forEach((item, i) => {
 		catalog.insertAdjacentHTML('beforeend', `
 		<li class="card" data-id="${i}">
 			<img class="card__image" src="data:image/jpeg;base64,${item.image64}" alt="test">
@@ -140,6 +140,35 @@ modalItem.addEventListener('click', event => {
 
 
 renderCard();
+
+
+//поиск
+
+const searchInput = document.querySelector('.search__input');
+
+searchInput.addEventListener('input', event => {
+	const valueSearch = event.target.value.trim().toLowerCase();
+	if (valueSearch.length > 2) {
+		const result = dataBase.filter( item => item.nameItem.toLowerCase().includes(valueSearch) ||
+			item.descriptionItem.toLowerCase().includes(valueSearch));
+
+		renderCard(result)
+	}
+});
+
+// фильтр
+
+const menuContainer = document.querySelector('.menu__container');
+
+menuContainer.addEventListener('click', event => {
+	const target = event.target;
+
+	if (target.tagName === 'A') {
+		const result = dataBase.filter( item => item.category === target.dataset.category);
+
+		renderCard(result)
+	}
+});
 
 
 

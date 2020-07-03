@@ -39,11 +39,11 @@
 				</div>
 				<nav class="menu">
 					<ul class="menu__container">
-						<li class="menu__link"><a href="#">Одежда</a></li>
-						<li class="menu__link"><a href="#">Обувь</a></li>
-						<li class="menu__link"><a href="#">Игрушки</a></li>
-						<li class="menu__link"><a href="#">Мебель</a></li>
-						<li class="menu__link"><a href="#">Техника</a></li>
+						<li class="menu__link"><a href="#" data-category="cloth">Одежда</a></li>
+						<li class="menu__link"><a href="#" data-category="foot">Обувь</a></li>
+						<li class="menu__link"><a href="#" data-category="toy">Игрушки</a></li>
+						<li class="menu__link"><a href="#" data-category="furniture">Мебель</a></li>
+						<li class="menu__link"><a href="#" data-category="tech">Техника</a></li>
 					</ul>
 				</nav>
 				<button class="btn add__ad">
@@ -55,7 +55,6 @@
 					<label class="search__label">
 						<input class="search__input" type="search">
 					</label>
-					<button class="search__btn" type="submit">Найти</button>
 				</form>
 			</div>
 
@@ -175,7 +174,7 @@
 
 					<label>
 						<span>Описание:</span>
-						<textarea name="descriptionItem" maxlength="10000" required></textarea>
+						<textarea name="descriptionItem" maxlength="3000" required></textarea>
 					</label>
 
 					<label>
